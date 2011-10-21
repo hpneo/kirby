@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Kirby
+    = stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Salsa|Vollkorn|Droid Sans"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %header
+      %h1 Kirby
+    = yield
+    :javascript
+      $(function(){
+        new Kirby.Routers.HomeRouter({publishers: #{@publishers.to_json.html_safe} });
+        new Kirby.Routers.PublishersRouter({publishers: #{@publishers.to_json.html_safe} });
+        Backbone.history.start();
+      });

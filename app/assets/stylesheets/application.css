@@ -1,0 +1,26 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+body{
+  background:url('soft_wallpaper.png');
+}
+h1{
+  font-family: 'Salsa';
+  font-size:4em;
+  margin:0;
+  text-align:center;
+  text-shadow:2px 2px 1px #ffffff;
+}
+h2, h4{
+  font-family: 'Vollkorn';
+  margin:0;
+  text-shadow:2px 2px 1px #ffffff;
+}
+h3{
+  font-family: 'Droid Sans';
+  margin:0;
+}
